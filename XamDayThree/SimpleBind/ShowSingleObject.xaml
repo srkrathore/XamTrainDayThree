@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="XamDayThree.ShowSingleObject" BackgroundColor="White">
+<ContentPage.Resources>
+<ResourceDictionary>
+<Style TargetType="Label" >
+	<Setter Property="FontSize" Value="20" ></Setter>
+	<Setter Property="VerticalOptions" Value="Center"></Setter>
+	<Setter Property="TextColor" Value="Black" ></Setter>
+</Style>
+<Style TargetType="Entry" >
+	<Setter Property="TextColor" Value="Red" ></Setter>
+</Style>
+<Style TargetType="Button">
+	<Setter Property="BorderRadius" Value="10" />
+	<Setter Property="BorderWidth" Value="2" />
+	<Setter Property="WidthRequest" Value="150" />
+	<Setter Property="HeightRequest" Value="150" />
+    <Setter Property="HorizontalOptions"  Value="Center" />
+    <Setter Property="VerticalOptions"    Value="Center" />
+    <Setter Property="FontSize" Value="Medium" />
+    <Setter Property="TextColor" Value="Red" />
+</Style>
+</ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+
+<Grid>
+<Grid.RowDefinitions>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+	<ColumnDefinition Width="10"/>
+	<ColumnDefinition Width="*"/>
+	<ColumnDefinition Width="*"/>
+	<ColumnDefinition Width="10"/>
+</Grid.ColumnDefinitions>
+
+<Label Grid.Row ="1" Grid.Column="1" Text="Name" />
+<Label Grid.Row="1" Grid.Column="2"  Text ="{Binding UserName}" />
+<Label Grid.Row ="2" Grid.Column="1" Text="DOB" />
+<Label Grid.Row="2" Grid.Column="2" Text ="{Binding DateOfBirth}"/>
+<Label Grid.Row ="3" Grid.Column="1" Text="TOB" />
+<Label Grid.Row="3" Grid.Column="2" Text ="{Binding TimeOfBirth}"/>
+<Label Grid.Row ="4" Grid.Column="1" Text="Gender"  />
+<Label Grid.Row="4" Grid.Column="2" Text ="{Binding Gender}" />
+<Label Grid.Row ="5" Grid.Column="1" Text="States"  />
+<Label Grid.Row="5" Grid.Column="2" Text ="{Binding State}" />
+<Label Grid.Row ="6" Grid.Column="1" Text="Qualification"/>
+<Label Grid.Row="6" Grid.Column="2" Text ="{Binding Qualification}" />
+<Label Grid.Row ="7" Grid.Column="1" Text="Password" />
+<Label Grid.Row="7" Grid.Column="2" Text ="{Binding LoginPass}"/>
+
+
+</Grid>
+
+
+</ContentPage.Content>
+</ContentPage>

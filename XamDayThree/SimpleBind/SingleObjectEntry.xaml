@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="XamDayThree.SingleObjectEntry"
+	BackgroundColor="White">
+<ContentPage.Resources>
+<ResourceDictionary>
+<Style TargetType="Label" >
+	<Setter Property="FontSize" Value="20" ></Setter>
+	<Setter Property="VerticalOptions" Value="Center"></Setter>
+	<Setter Property="TextColor" Value="Black" ></Setter>
+</Style>
+<Style TargetType="Entry" >
+	<Setter Property="TextColor" Value="Red" ></Setter>
+</Style>
+<Style TargetType="Button">
+	<Setter Property="BorderRadius" Value="10" />
+	<Setter Property="BorderWidth" Value="2" />
+	<Setter Property="WidthRequest" Value="150" />
+	<Setter Property="HeightRequest" Value="150" />
+    <Setter Property="HorizontalOptions"  Value="Center" />
+    <Setter Property="VerticalOptions"    Value="Center" />
+    <Setter Property="FontSize" Value="Medium" />
+    <Setter Property="TextColor" Value="Red" />
+</Style>
+</ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+
+<Grid>
+<Grid.RowDefinitions>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+	<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+	<ColumnDefinition Width="10"/>
+	<ColumnDefinition Width="*"/>
+	<ColumnDefinition Width="*"/>
+	<ColumnDefinition Width="10"/>
+</Grid.ColumnDefinitions>
+
+<Label Grid.Row ="1" Grid.Column="1" Text="Name" />
+<Entry x:Name="txtName" Grid.Row="1" Grid.Column="2"  HeightRequest="5"/>
+<Label Grid.Row ="2" Grid.Column="1" Text="DOB" />
+<DatePicker x:Name="dtDOB" Grid.Row="2" Grid.Column="2" HeightRequest="5"/>
+<Label Grid.Row ="3" Grid.Column="1" Text="TOB" />
+<TimePicker Grid.Row="3" x:Name="tmTOB"	Grid.Column="2" HeightRequest="5"/>
+<Label Grid.Row ="4" Grid.Column="1" Text="Gender"  />
+<Picker Grid.Row="4" Grid.Column="2" x:Name="pcGender" >
+<Picker.Items>
+<x:String>Male</x:String>
+<x:String>Female</x:String>
+</Picker.Items>
+</Picker>  
+
+<Label Grid.Row ="5" Grid.Column="1" Text="States" x:Name="pcState" />
+<Picker Grid.Row="5" Grid.Column="2" >
+	<Picker.Items>
+		<x:String>Punjab</x:String>
+		<x:String>Haryana</x:String>
+		<x:String>Himachal</x:String>
+	</Picker.Items>
+</Picker>
+
+<Label Grid.Row ="6" Grid.Column="1" Text="Qualification" x:Name="pcQual" />
+<Picker Grid.Row="6" Grid.Column="2" >
+	<Picker.Items>
+	<x:String>Btech</x:String>
+	<x:String>Mtech</x:String>
+	<x:String>MBA</x:String>
+	</Picker.Items>
+</Picker>    
+
+<Label Grid.Row ="7" Grid.Column="1" Text="Password" />
+<Entry Grid.Row="7" Grid.Column="2" IsPassword="true" x:Name="txtPassword"/>
+<Label Grid.Row ="8" Grid.Column="1" Text="Confirm Password"/>
+<Entry Grid.Row="8" Grid.Column="2" IsPassword="true"/>
+
+<Button Text="Save" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Clicked="OnSaveClicked" />
+
+</Grid>
+
+
+</ContentPage.Content>
+</ContentPage>
