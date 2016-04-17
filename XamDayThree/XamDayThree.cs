@@ -9,7 +9,10 @@ namespace XamDayThree
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new NavigationPage( new AppUserList());
+			//MainPage = new NavigationPage( new AppUserList());
+			//MainPage = new NavigationPage( new SimpleViewModel());
+			//MainPage = new NavigationPage( new ClockPage());
+			MainPage = new NavigationPage( new CommandingEx());
 		}
 
 		protected override void OnStart ()
