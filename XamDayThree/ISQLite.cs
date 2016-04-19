@@ -6,6 +6,7 @@ namespace XamDayThree
 	public interface ISQLite
 	{
 		SQLiteConnection GetConnection();
+		SQLiteConnection GetSecConnection();
 	}
 }
 

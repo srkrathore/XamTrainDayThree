@@ -4,19 +4,19 @@
 	x:Class="XamDayThree.View2View">
 	<ContentPage.Content>
 	  <StackLayout>
-    <Label Text="ROTATION"
-           BindingContext="{x:Reference Name=slider}"
+    <Label Text="ROTATION LABEL"
+           BindingContext="{x:Reference Name=slrSource}"
            Rotation="{Binding Path=Value}"
            FontAttributes="Bold"
            FontSize="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     
-    <Slider x:Name="slider"
+    <Slider x:Name="slrSource"
             Maximum="360"
             VerticalOptions="CenterAndExpand" />
-
-    <Label BindingContext="{x:Reference slider}"
+	<Entry BindingContext="{x:Reference slrSource}" Text="{Binding Value , Mode=TwoWay}" />
+    <Label BindingContext="{x:Reference slrSource}"
            Text="{Binding Value, 
                           StringFormat='The angle is {0:F0} degrees'}"
            FontSize="Large"

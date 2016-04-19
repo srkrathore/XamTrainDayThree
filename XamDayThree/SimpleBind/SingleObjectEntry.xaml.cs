@@ -60,12 +60,13 @@ namespace XamDayThree
 				Qualification="MTech",
 				LoginPass="Password"
 			};
-			App.DAUtil.SaveUser (vUser);
+			Navigation.PushAsync (new ShowSingleObject(vUser));
+		/*	App.DAUtil.SaveUser (vUser);
 			App.DAUtil.SaveUser (vUserOne);
 			App.DAUtil.SaveUser (vUserTwo);
 			App.DAUtil.SaveUser (vUserThree);
 			App.DAUtil.SaveUser (vUserFour);
-			Navigation.PushAsync (new AppUserList());
+			Navigation.PushAsync (new AppUserList());*/
 		}
 	}
 
@@ -74,6 +75,7 @@ namespace XamDayThree
 		[PrimaryKey, AutoIncrement]
 		public long UserId
 		{ get; set; }
+		[NotNull]
 		public string UserName
 		{ get; set; }
 		public DateTime DateOfBirth

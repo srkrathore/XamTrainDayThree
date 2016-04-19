@@ -33,10 +33,7 @@
 		<!-- Slider and identifying Label for RotationY -->
 		<Slider x:Name="rotationYSlider" BindingContext="{x:Reference lblSource}" Grid.Row="4" Grid.Column="1" Maximum="360" Value="{Binding RotationY, Mode=OneWayToSource}" />
 		<Label BindingContext="{x:Reference rotationYSlider}" Text="{Binding Value, StringFormat='RotationY = {0:F0}'}" Grid.Row="4" Grid.Column="0"  />
-		<Slider x:Name="scaleSliderOther" BindingContext="{x:Reference lblSource}" Grid.Row="5" Grid.Column="1" Maximum="10" Value="{Binding Scale, Mode=TwoWay}" />
-		<Label BindingContext="{x:Reference scaleSliderOther}" Text="{Binding Value, StringFormat='Scale = {0:F1}'}" Grid.Row="5" Grid.Column="0" />
-		<Slider x:Name="rotationSliderOther" BindingContext="{x:Reference lblSource}" Grid.Row="6" Grid.Column="1" Maximum="360" Value="{Binding Rotation, Mode=TwoWay}" />
-		<Label BindingContext="{x:Reference rotationSliderOther}" Text="{Binding Value, StringFormat='Scale = {0:F1}'}" Grid.Row="6" Grid.Column="0" />
+
 
 	</Grid>
 	</ContentPage.Content>

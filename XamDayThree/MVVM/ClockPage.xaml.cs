@@ -10,7 +10,10 @@ namespace XamDayThree
 	{
 		public ClockPage ()
 		{
+			
 			InitializeComponent ();
+			var vClkViewModel = new ClockViewModel ();
+			lblTime.BindingContext = vClkViewModel; 
 		}
 	}
 

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="XamDayThree.SecTableList">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+		<Style TargetType="Label">
+			<Setter Property="HorizontalOptions"  Value="Center" />
+			<Setter Property="VerticalOptions"    Value="CenterAndExpand" />
+			<Setter Property="FontSize" Value="Small" />
+			<Setter Property="TextColor" Value="Blue" />
+		</Style>
+   </ResourceDictionary>
+    </ContentPage.Resources>
+<ContentPage.Padding>
+	<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+</ContentPage.Padding>
+	<ContentPage.Content>
+        <ListView x:Name="lstUsers" HasUnevenRows="false" Header="Header Value" Footer="Footer" >
+          <ListView.HeaderTemplate>
+            <DataTemplate>
+              <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+                <Label Text="Image Id" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+                <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Message" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+              </StackLayout>
+            </DataTemplate>
+          </ListView.HeaderTemplate>
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                  <Label Text="{Binding ImageId}" FontSize="Medium" />
+                  <Label Text="{Binding ImgName}" FontSize="Medium" />
+                  <Label Text="{Binding ImgMessage}" FontSize="Medium" />
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+          <ListView.FooterTemplate>
+            <DataTemplate>
+              <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+					<Button Text="Add New" />
+              </StackLayout>
+            </DataTemplate>
+          </ListView.FooterTemplate>
+        </ListView>
+	</ContentPage.Content>
+</ContentPage>
