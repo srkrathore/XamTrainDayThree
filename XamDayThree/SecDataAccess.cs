@@ -12,9 +12,9 @@ namespace XamDayThree
 		SQLiteConnection dbConnection; 
 		public SecDataAccess ()
 		{
-			dbConnection = DependencyService.Get<ISQLite> ().GetSecConnection ();
+			//dbConnection = DependencyService.Get<ISQLite> ().GetSecConnection ();
 			// create the tables
-			dbConnection.CreateTable<GameImage>();
+			//dbConnection.CreateTable<GameImage>();
 
 		}
 

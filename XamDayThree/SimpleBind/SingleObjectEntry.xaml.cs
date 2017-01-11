@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
-using SQLite;
 using SQLite.Net.Attributes;
 
 namespace XamDayThree
 {
-	public partial class SingleObjectEntry : ContentPage
+    public partial class SingleObjectEntry : ContentPage
 	{
 		public SingleObjectEntry ()
 		{
@@ -60,13 +58,13 @@ namespace XamDayThree
 				Qualification="MTech",
 				LoginPass="Password"
 			};
-			Navigation.PushAsync (new ShowSingleObject(vUser));
-		/*	App.DAUtil.SaveUser (vUser);
+			//Navigation.PushAsync (new ShowSingleObject(vUser));
+			App.DAUtil.SaveUser (vUser);
 			App.DAUtil.SaveUser (vUserOne);
 			App.DAUtil.SaveUser (vUserTwo);
 			App.DAUtil.SaveUser (vUserThree);
 			App.DAUtil.SaveUser (vUserFour);
-			Navigation.PushAsync (new AppUserList());*/
+            Navigation.PushAsync(new AppUserList());
 		}
 	}
 
@@ -92,5 +90,29 @@ namespace XamDayThree
 		{ get; set; }
 
 	}
+
+
+    public class SecAppUser
+    {
+        [PrimaryKey, AutoIncrement]
+        public long UserId
+        { get; set; }
+        [NotNull]
+        public string UserName
+        { get; set; }
+        public DateTime DateOfBirth
+        { get; set; }
+        public DateTime TimeOfBirth
+        { get; set; }
+        public string Gender
+        { get; set; }
+        public string State
+        { get; set; }
+        public string Qualification
+        { get; set; }
+        public string LoginPass
+        { get; set; }
+
+    }
 }
 
