@@ -9,20 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace XamDayThree {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\CloudCode\\XamTrainDayThree\\XamDayThree\\SimpleBind\\View2View.xaml")]
     public partial class View2View : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Slider slrSource;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(View2View));
-            slrSource = this.FindByName<global::Xamarin.Forms.Slider>("slrSource");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(View2View));
+            slrSource = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Slider>(this, "slrSource");
         }
     }
 }

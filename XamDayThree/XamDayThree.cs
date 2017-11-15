@@ -39,9 +39,9 @@ namespace XamDayThree
             vTabEx.Children.Add(new ShowSingleObject() { Title = "User", BindingContext = vUserOne });
             //MainPage = vTabEx;
 			//MainPage = new NavigationPage( new AppUserList());
-			//MainPage = new NavigationPage( new SimpleViewModel());
-			//MainPage = new NavigationPage( new ClockPage());
 			MainPage = new NavigationPage( new InteractiveEx());
+			//MainPage = new NavigationPage( new ClockPage());
+			//MainPage = new NavigationPage(vTabEx);
 		}
 
 		protected override void OnStart ()

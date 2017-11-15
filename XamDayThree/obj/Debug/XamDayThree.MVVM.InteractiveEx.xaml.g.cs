@@ -9,16 +9,14 @@
 //------------------------------------------------------------------------------
 
 namespace XamDayThree {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\CloudCode\\XamTrainDayThree\\XamDayThree\\MVVM\\InteractiveEx.xaml")]
     public partial class InteractiveEx : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(InteractiveEx));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(InteractiveEx));
         }
     }
 }

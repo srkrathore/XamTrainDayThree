@@ -9,20 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace XamDayThree {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\CloudCode\\XamTrainDayThree\\XamDayThree\\SimpleBind\\AppUserList.xaml")]
     public partial class AppUserList : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstUsers;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(AppUserList));
-            lstUsers = this.FindByName<global::Xamarin.Forms.ListView>("lstUsers");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AppUserList));
+            lstUsers = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lstUsers");
         }
     }
 }

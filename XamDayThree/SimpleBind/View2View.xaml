@@ -15,7 +15,7 @@
     <Slider x:Name="slrSource"
             Maximum="360"
             VerticalOptions="CenterAndExpand" />
- 	  <Entry BindingContext="{x:Reference slrSource}" Text="{Binding Value , Mode=TwoWay}" />
+    <Entry BindingContext="{x:Reference slrSource}" Text="{Binding Value , Mode=TwoWay}" />
     <Label BindingContext="{x:Reference slrSource}"
            Text="{Binding Value, 
                           StringFormat='The angle is {0:F0} degrees'}"

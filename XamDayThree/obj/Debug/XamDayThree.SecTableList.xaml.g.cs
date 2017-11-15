@@ -9,20 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace XamDayThree {
-    using System;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     
     
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\CloudCode\\XamTrainDayThree\\XamDayThree\\SecTableList.xaml")]
     public partial class SecTableList : global::Xamarin.Forms.ContentPage {
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstUsers;
         
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(SecTableList));
-            lstUsers = this.FindByName<global::Xamarin.Forms.ListView>("lstUsers");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SecTableList));
+            lstUsers = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lstUsers");
         }
     }
 }
